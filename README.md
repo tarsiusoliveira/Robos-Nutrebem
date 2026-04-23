@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/license-UNLICENSED-red)](./LICENSE)
 [![Security](https://img.shields.io/badge/security-hardened-brightgreen)](./SECURITY.md)
 
-**Automation robot with Playwright Python** - A robust browser automation tool for managing product restrictions in Nutrebem canteen systems across production and staging environments.
+**Automation using Python Playwright** - A robust browser automation tool for managing product restrictions in Nutrebem canteen systems across production and staging environments.
 
 ## 📋 About
 
@@ -25,7 +25,7 @@ This project automates the process of updating product restrictions in Nutrebem 
 ## 📊 Project Metadata
 
 - **Version:** 1.0.0
-- **Author:** Tarsio Oliveira
+- **Author:** Tarsius Oliveira
 - **Repository:** https://github.com/tarsiusoliveira/Robo-Nutrebem
 - **Python Version:** 3.7+
 - **Status:** Active
