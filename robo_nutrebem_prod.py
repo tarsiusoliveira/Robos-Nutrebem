@@ -1,11 +1,27 @@
 from playwright.sync_api import sync_playwright
 import pandas as pd
 import time
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 def limpar_restricoes_producao():
+    # Get credentials from environment variables
+    email = os.getenv('PROD_EMAIL')
+    password = os.getenv('PROD_PASSWORD')
+    csv_file = os.getenv('PROD_CSV_FILE', 'dados_exec_prod.csv')
+    
+    if not email or not password:
+        raise ValueError("PROD_EMAIL and PROD_PASSWORD environment variables are required. See .env.example for setup.")
+    
+    if not os.path.exists(csv_file):
+        raise FileNotFoundError(f"CSV file not found: {csv_file}")
+    
     print("Carregando base de dados de PRODUÇÃO...")
-    # 1. Atualizado o nome do arquivo CSV
-    df = pd.read_csv("dados_exec_prod1.csv")
+    # 1. Load CSV file
+    df = pd.read_csv(csv_file)
     
     # 2. Varredura completa: pega todos os IDs únicos do arquivo inteiro
     produtos_unicos = df['product_id'].unique()
@@ -27,9 +43,9 @@ def limpar_restricoes_producao():
         print("Iniciando processo de Login em Produção...")
         page.goto("https://app.nutrebem.com.br/pt-BR/login") 
         
-        # ATENÇÃO: Preencha com seu email e senha de Produção
-        page.fill("input[type='text']", "user_email")
-        page.fill("input[type='password']", "user_password")
+        # Use credentials from environment variables
+        page.fill("input[type='text']", email)
+        page.fill("input[type='password']", password)
         page.click("input[type='submit'], button:has-text('Entrar')") 
         
         page.wait_for_load_state('networkidle')
