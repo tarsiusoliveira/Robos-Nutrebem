@@ -1,6 +1,36 @@
-# Testes_python
+# Robo Nutrebem
 
-A Python project for automating product restrictions management in Nutrebem environments.
+[![Python 3.7+](https://img.shields.io/badge/python-3.7%2B-blue)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-UNLICENSED-red)](./LICENSE)
+[![Security](https://img.shields.io/badge/security-hardened-brightgreen)](./SECURITY.md)
+
+**Automation robot with Playwright Python** - A robust browser automation tool for managing product restrictions in Nutrebem canteen systems across production and staging environments.
+
+## 📋 About
+
+This project automates the process of updating product restrictions in Nutrebem environments. It uses Playwright for browser automation to:
+
+- Read product IDs from CSV data files
+- Navigate to the web application
+- Update product restriction settings in bulk
+- Handle both production and staging environments
+- Provide detailed logging and error reporting
+
+**Target Systems:**
+- **Production:** https://app.nutrebem.com.br
+- **Staging:** https://nutrebem.dev.nutrebem.com.br
+
+---
+
+## 📊 Project Metadata
+
+- **Version:** 1.0.0
+- **Author:** Tarsio Oliveira
+- **Repository:** https://github.com/tarsiusoliveira/Robo-Nutrebem
+- **Python Version:** 3.7+
+- **Status:** Active
+
+---
 
 ## ⚠️ Security & Privacy
 
@@ -147,11 +177,42 @@ For local development, follow the setup instructions above. All configuration is
 
 ## License
 
-[Add your license here]
+This project is currently **UNLICENSED**. 
+
+For licensing inquiries or to discuss using this code, please contact the author.
 
 ## Contributing
 
-[Add contribution guidelines here]
+We welcome contributions! Please read [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for guidelines on:
+
+- How to set up your development environment
+- Code style and best practices
+- Security considerations for sensitive projects
+- Pull request process
+- Reporting issues
+
+**Key requirement:** Never commit sensitive data (credentials, tokens, API keys, or CSV files).
+
+## Support
+
+For issues, questions, or feature requests:
+1. Check the [Troubleshooting](#troubleshooting) section
+2. Review [SECURITY.md](./SECURITY.md) for security-related questions
+3. Open an issue on GitHub (without sharing sensitive information)
+
+## Changelog
+
+### v1.0.0 (2026-04-23)
+- Initial public release
+- Environment-based credential management
+- Security hardening for public deployment
+- Comprehensive documentation
+- Contribution guidelines
+- Support for both production and staging environments
+
+---
+
+**Copyright © 2026 Tarsio Oliveira. All rights reserved.**
 
 
 To add new dependencies, update `requirements.txt` and reinstall:
