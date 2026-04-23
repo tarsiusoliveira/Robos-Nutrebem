@@ -28,8 +28,8 @@ def limpar_restricoes_staging():
         page.goto("https://nutrebem.dev.nutrebem.com.br/pt-BR/login") 
         
         # ATENÇÃO: Preencha com as credenciais válidas do ambiente de Staging
-        page.fill("input[type='text']", "tarsius+admin@easyfood.com.br")
-        page.fill("input[type='password']", "123")
+        page.fill("input[type='text']", "user_email")
+        page.fill("input[type='password']", "user_password")
         page.click("input[type='submit'], button:has-text('Entrar')") 
         
         page.wait_for_load_state('networkidle')
